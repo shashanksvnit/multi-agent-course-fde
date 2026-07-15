@@ -1,0 +1,98 @@
+# Forward Deployed Engineer (FDE) Track
+
+> **"Full stack" here means full-stack SWE *and* AI engineering.** You build the
+> whole product — the frontend, the agent logic, the model serving, the caching,
+> and the deployment. One product, fully under your control.
+
+**"Forward Deployed Engineer" is the new moat in AI.** Plenty of engineers can call
+an LLM API; plenty can build a React frontend or a Node.js backend. Far fewer can take
+an AI idea all the way to a shipped product — from the code in the browser down to the
+model running on their own servers. That's the gap this track closes.
+
+A Forward Deployed Engineer takes a capability and stands it up end to end where it's
+needed: shipping into a live environment, owning the service behind it, respecting the
+interfaces around it, and deploying it so it keeps running. You won't wrap an API in a
+chat box and call it a product — you'll merge the three layers most courses keep apart
+(a React frontend, a Node.js backend, and an AI backend), with the caching,
+observability, and deployment that keep it fast and up. Every layer, built by you,
+debugged by you, shipped by you.
+
+## What makes this track different
+
+Most exercises hand you a clean sandbox. FDE work rarely is one. Across the track you'll
+repeatedly:
+
+- **Ship into environments you didn't build** — a browser, a customer's page, a third-party API.
+- **Own a real service** — an LLM, a cache, logs, traces, health checks, and a deploy.
+- **Conform to a contract** you don't get to change.
+- **Separate concerns** — app/gateway layers vs. AI layers — and make them talk.
+- **Prove it works** with observability and a measurable rubric, not vibes.
+
+That control is the point: it's how you cut latency and cost, keep data in-house, and
+build what an API never will.
+
+## What you'll learn
+
+Build and ship complete AI products yourself — both the software engineering and the AI:
+
+- **Full-stack AI products, end to end** — frontend, backend, and AI backend as one
+  seamless product; own the full request path so you can debug any layer.
+- **Run your own model** — serve a model with vLLM on RunPod, or route through OpenRouter,
+  and swap providers without rewriting your app.
+- **Multimodal Agentic RAG that scales** — retrieve across text, images, audio, and video;
+  semantic caching and knowledge graphs for hybrid memory; scale toward millions of items.
+- **Safe, evaluated agents** — Llama Guard guardrails; trajectory-vs-outcome evaluation;
+  catch regressions before they ship.
+- **Observability across the stack** — tracing, dashboards, and per-request latency, cost,
+  and quality.
+- **Distributed systems that stay up** — independent services (app, inference, retrieval,
+  workers) that scale and fail on their own; multi-agent coordination with MCP and A2A.
+
+## Who it's for
+
+- **Senior frontend / full-stack engineers going AI-native** — strong in React, Node, and
+  Python, who learn by building, not watching.
+- **ML engineers who get stuck shipping** — can build a model, but want the frontend,
+  caching, and deployment skills to actually get it out the door.
+- **Founding and early-stage engineers** — own everything, and need to ship a real AI
+  product on infrastructure they control.
+
+## Assignments
+
+Four classes, four real-world products, all built end to end — from efficiency to action.
+
+| # | Name | You build | Core skills |
+|---|------|-----------|-------------|
+| 1 | [Live Translate](Assignment_1_Live_Translate/) | A two-service backend (Node gateway + Python AI service) behind a provided browser widget that live-translates any page EN → Mexican Spanish | LLM calls, caching, structured logging + tracing, service separation, API contracts, deploy on Fly.io |
+| … | _more coming_ | | |
+
+Each assignment folder is self-contained with its own `README.md`, provided scaffolding,
+an `AGENTS.md` of non-negotiables, and a grading rubric.
+
+## How every FDE project is graded
+
+Consistent across the track: a **measurable rubric** plus a **video demo**.
+
+- Each assignment ships an `eval/` folder with a `rubric.json` and an `eval.py`, and a
+  bundled eval **skill** in `.claude/skills/`.
+- `python eval/eval.py --student "…" --video "…"` scores the automated criteria against
+  the running project and captures evidence, writing an intermediate scorecard
+  (`eval/REPORT.md`). The eval skill runs that plus a live real-world test and folds it
+  into a **`PRODUCT_EVAL.md`** — the polished Product Evaluation.
+- Submission = **`PRODUCT_EVAL.md` (or PDF) + a 60–90s screen recording** — not the raw
+  `REPORT.md` scorecard. An `AGENTS.md` in each assignment states the non-negotiables so a
+  coding agent (Claude Code) inherits them automatically.
+
+## How to work through an assignment
+
+1. Read the assignment's `README.md` top to bottom before writing code.
+2. Run the provided pieces first so you can see what "done" looks like.
+3. Build the parts marked as yours; the provided frontend/tests are your acceptance check.
+4. Prove it with logs, traces, and stats; deploy it for real; then tackle the stretch goals.
+
+## Prerequisites
+
+- Comfort with a terminal, `git`, and HTTP/JSON.
+- **Node 18+** and **Python 3.10+** installed.
+- An API key for one LLM provider (Anthropic, Google, or OpenAI).
+- A free **[Fly.io](https://fly.io)** account for the deploy step.
