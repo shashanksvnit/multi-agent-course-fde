@@ -1,5 +1,7 @@
 # Assignment 2 — Evaluation Questions
 
+**Demo video:** https://www.loom.com/share/70f96d1e25f9407eb695347e7810c1f3
+
 Answers below are grounded in what was actually observed running this project end to
 end (offline mocks, live typed mode against real GPT-4o-mini, and the LiveKit room
 demo with real mic input) — not just the textbook explanation.

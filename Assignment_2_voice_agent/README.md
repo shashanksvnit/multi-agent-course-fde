@@ -1,5 +1,7 @@
 # Assignment 2: Voice Agent for Hotel Reservations
 
+**Demo video:** https://www.loom.com/share/70f96d1e25f9407eb695347e7810c1f3
+
 This assignment builds a practical voice agent for Aurora Hotel reservations. The goal is not just to run a demo, but to understand the full stack of a voice application from a Forward Deployed Engineering perspective: the user workflow, the model boundary, the tool layer, the audio pipeline, operational fallbacks, and what would change in production.
 
 The agent can:
