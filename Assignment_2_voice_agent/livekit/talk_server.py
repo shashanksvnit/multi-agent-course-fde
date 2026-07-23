@@ -18,7 +18,7 @@ from urllib.parse import parse_qs, urlparse
 import jwt
 from livekit import api
 
-HOST = "localhost"
+HOST = "0.0.0.0"
 PORT = 5173
 ROOT = Path(__file__).resolve().parent
 ASSIGNMENT_ROOT = ROOT.parent
